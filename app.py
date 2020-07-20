@@ -38,4 +38,4 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    app.run(port=3900)
+    app.run(port=5000)
