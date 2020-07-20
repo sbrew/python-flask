@@ -16,12 +16,10 @@ class UserModel(db.Model):
         db.session.add(self)
         db.session.commit()
 
-            #username mapping
     @classmethod
     def find_by_username(cls, username):
         return cls.query.filter_by(username=username).first() 
 
-            #user id mapping
     @classmethod
     def find_by_id(cls, _id):
         return cls.query.filter_by(id=_id).first()

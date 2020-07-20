@@ -21,10 +21,9 @@ class ItemModel(db.Model):
 
     @classmethod
     def find_by_name(cls, name):
-        # SELECT * FROM items WHERE name=name limit 1
         return ItemModel.query.filter_by(name=name).first()
 
-    def save_to_db(self):  # useful to insert and update
+    def save_to_db(self): 
         db.session.add(self)
         db.session.commit()
 
