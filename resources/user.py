@@ -14,7 +14,7 @@ class UserRegister(Resource):
             type=str,
             required=True,
             help="Password Field cannot be left blank.. would you just leave your doors unlocked??"
-        )
+        )z
 
     def post(self):
         data = UserRegister.parser.parse_args()

@@ -64,4 +64,5 @@ class Item(Resource):
 
 class ItemList(Resource):
     def get(self):
-        return {'items': [item.json() for item in ItemModel.query.all()]} 
+        return {'items': [item.json() for item in ItemModel.query.all()]} #using a list comprehension
+        # return {'items': list(map(lambda x: x.json(), ItemModel.query.all()))} #lambda functions possibly slower than list comprehension
